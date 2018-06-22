@@ -148,17 +148,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="vec2.cpp" />
-    <ClCompile Include="vec3.cpp" />
-    <ClCompile Include="vec4.cpp" />
+    <ClCompile Include="maths\mat4.cpp" />
+    <ClCompile Include="maths\vec2.cpp" />
+    <ClCompile Include="maths\vec3.cpp" />
+    <ClCompile Include="maths\vec4.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="maths.h" />
-    <ClInclude Include="vec2.h" />
-    <ClInclude Include="vec3.h" />
-    <ClInclude Include="vec4.h" />
+    <ClInclude Include="maths\mat4.h" />
+    <ClInclude Include="maths\maths.h" />
+    <ClInclude Include="maths\maths_func.h" />
+    <ClInclude Include="maths\vec2.h" />
+    <ClInclude Include="maths\vec3.h" />
+    <ClInclude Include="maths\vec4.h" />
     <ClInclude Include="window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

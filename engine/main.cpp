@@ -2,14 +2,14 @@
 //#include <iostream>
 
 #include "window.h"
-#include "vec2.h"
+#include "maths/maths.h"
 
 int main(){
 
 	using namespace sparky;
 	using namespace graphics;
 	using namespace maths;
-	using namespace std;
+	//using namespace std;
 
 	Window window("Sparky", 800, 600);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
@@ -18,10 +18,12 @@ int main(){
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
-	vec2 a(1.0f, 1.0f);
-	vec2 b(2, 4);
+	vec4 a(0.2f, 0.3f, 0.8f, 1.0f);
+	vec4 b(0.5f, 0.2f, 0.1f, 1.0f);
 
-	a *= b;
+	vec4 c = a * b;
+
+	mat4 position = mat4::translation(vec3(2, 3, 4));
 
 
 	while (!window.closed())
