@@ -2,7 +2,7 @@
 
 namespace sparky {
 	namespace graphics {
-		IndexBuffer::IndexBuffer(GLshort* data, GLsizei count)
+		IndexBuffer::IndexBuffer(GLushort* data, GLsizei count)
 			: m_Count(count)
 		{
 			glGenBuffers(1, &m_BufferID);
