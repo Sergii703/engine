@@ -46,7 +46,7 @@ namespace sparky {
 			return multiply(other);
 
 		}
-		static mat4 orthographic(float left, float right, float bottom, float top, float near, float far) {
+		static mat4& orthographic(float left, float right, float bottom, float top, float near, float far) {
 			mat4 result(1.0f);
 
 			result.elements[0 + 0 * 4] = 2.0f / (right - left);
@@ -58,7 +58,7 @@ namespace sparky {
 			result.elements[2 + 3 * 4] = (far + near) / (far - near);
 		}
 
-		static mat4 perspective(float fov, float aspectRatio, float near, float far) {
+		static mat4& perspective(float fov, float aspectRatio, float near, float far) {
 			mat4 result(1.0f);
 
 			float q = 1.0f / tan(toRadians(0.5f *fov));

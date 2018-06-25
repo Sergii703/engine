@@ -3,6 +3,9 @@
 #include "graphics/window.h"
 #include "graphics/shader.h"
 #include "maths/maths.h"
+#include "graphics/buffers/buffer.h"
+#include "graphics/buffers/indexBuffer.h"
+#include "graphics/buffers/vertexArray.h"
 
 int main(){
 
@@ -29,11 +32,11 @@ int main(){
 	glVertexAttribPointer(0, 3,GL_FLOAT, GL_FALSE, 0, 0);
 	glEnableVertexAttribArray(0);
 
-	mat4 ortho = mat4::perspective(0.0f, 16.0f, 0.0f, 9.0f);
+	//mat4 ortho = mat4::perspective(0.0f, 16.0f, 0.0f, 9.0f);
 
 	Shader shader("shaders/basic.vert", "shaders/basic.frag");
 	shader.enable();
-	shader.setUniformMat4("pr_matrix", ortho);
+	//shader.setUniformMat4("pr_matrix", ortho);
 	
 
 	while (!window.closed())
