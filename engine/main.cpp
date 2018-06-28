@@ -19,11 +19,11 @@ int main(){
 
 	Window window("Sparky", 800, 600);
 	
-	mat4 ortho = mat4::perspective(0.0f, 16.0f, 0.0f, 9.0f);
+	//mat4 ortho = mat4::perspective(0.0f, 16.0f, 0.0f, 9.0f);
 	
 	Shader shader("shaders/basic.vert", "shaders/basic.frag");
 	shader.enable();
-	shader.setUniformMat4("pr_matrix", ortho);
+	//shader.setUniformMat4("pr_matrix", ortho);
 	shader.setUniformMat4("ml_matrix", mat4::translation(vec3(4, 3, 0)));
 	
 	Renderable2D sprite(maths::vec3(0, 0, 0), maths::vec2(4, 4), maths::vec4(1, 0, 1, 1), shader);

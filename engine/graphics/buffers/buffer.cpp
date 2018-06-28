@@ -11,7 +11,7 @@ namespace sparky {
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 		};
-
+			
 			void Buffer::bind() const {
 				glBindBuffer(GL_ARRAY_BUFFER, m_BufferID);
 			}
